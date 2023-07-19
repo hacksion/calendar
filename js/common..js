@@ -59,7 +59,7 @@ const drop = e => {
   let dropId = dropData[0];
   let dropDate = dropData[1].split('T');
   let dropElm = document.querySelector('[data-id="' + dropId + '"]');
-  let areaDate = e.target.dataset.td_date;
+  let areaDate = e.target.dataset.td_date == undefined ? e.target.parentElement.dataset.td_date:e.target.dataset.td_date;
   e.currentTarget.appendChild(dropElm);
   if(dropDate[0] != areaDate){
     dropElm.dataset.schedule_datetime = areaDate + 'T' + dropDate[1];
