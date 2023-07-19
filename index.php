@@ -76,7 +76,7 @@ if ($last_weekday < 6) {
 $calendar = '<tr>';
 foreach ($date_set as $key => $value) {
     $row_last = date('Ymd', strtotime(end($date_set))) == date('Ymd', strtotime($value)) ? 1 : 0;
-    $calendar .= '<td draggable="false" ondragleave="dragLeave(event)" ondragover="dragOver(event)" ondrop="drop(event)" ondragstart="dragStart(event)" class="droparea ';
+    $calendar .= '<td draggable="false" dropzone="move" ondragleave="dragLeave(event)" ondragover="dragOver(event)" ondrop="drop(event)" ondragstart="dragStart(event)" class="droparea ';
     $calendar .= date('w', strtotime($value)) == 0 ? 'text-danger ' : '';
     $calendar .= date('Ym', strtotime($value)) != date('Ym', strtotime($Ymd_01)) ? 'bg-light' : '';
     $calendar .= '" data-td_date="' . date('Y-m-d', strtotime($value)) . '">';
