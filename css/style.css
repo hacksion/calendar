@@ -1,0 +1,60 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1em;
+  color: rgb(48, 48, 48);
+  background-color: #EFEEE5;
+}
+
+nav {
+  background-color: #2A5D84;
+  color: white;
+}
+
+footer {
+  background-color: #333333;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+footer small {
+  color: #a3a3a3;
+}
+
+.table.calendar {
+  table-layout: fixed;
+}
+.table.calendar thead th {
+  padding-top: 0;
+  padding-bottom: 0;
+  border: 1px solid #ddd;
+  font-size: 0.9rem;
+}
+.table.calendar td {
+  border: 1px solid #ddd;
+  height: 8rem;
+}
+.table.calendar td .schedule_data {
+  background-color: #2A5D84;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+.table.calendar td .schedule_data:hover {
+  background-color: #3574a5;
+  color: white;
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+.table.calendar td .create_schedule {
+  cursor: pointer;
+  margin-bottom: 0.2rem;
+}
+.table.calendar td.dragover {
+  background-color: #FFF2F2 !important;
+  font-size: 1.5rem;
+}
