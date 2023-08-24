@@ -1,9 +1,6 @@
 <?php
 require('common.php');
 
-//ログインした状態を再現 ID = 1
-$_SESSION['schedule']['user_id'] = 1;
-
 //display current month if there is no GET
 $Ymd_01 = date('Ym01');
 
@@ -13,6 +10,9 @@ if (isset($_POST['y']) && isset($_POST['m']) && checkdate($_POST['m'], 1, $_POST
     unset($_POST['m']);
     unset($_SESSION['schedule']);
 }
+
+//ログインした状態を再現 ID = 1
+$_SESSION['schedule']['user_id'] = 1;
 
 if (isset($_SESSION['schedule']['y']) && isset($_SESSION['schedule']['m']) && checkdate($_SESSION['schedule']['m'], 1, $_SESSION['schedule']['y'])) {
     $Ymd_01 = date('Ymd', strtotime($_SESSION['schedule']['y'] . sprintf('%02d', $_SESSION['schedule']['m']) . '01'));
